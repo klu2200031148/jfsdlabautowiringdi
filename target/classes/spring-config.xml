@@ -1,0 +1,35 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="employee" class="com.klef.jfsd.exam.spring_di_autowiring.Employee">
+        <constructor-arg value="101"/>
+        <constructor-arg value="kavya"/>
+        <constructor-arg value="75000.00"/>
+        <constructor-arg value="CSE"/>
+        <constructor-arg>
+            <list>
+                <value>Jfsd</value>
+                <value>pfsd</value>
+                <value>mswd</value>
+            </list>
+        </constructor-arg>
+    </bean>
+<bean id="course" class="com.klef.jfsd.exam.spring_di_autowiring.Course" autowire="byType">
+        <property name="courseId" value="1"/>
+        <property name="courseName" value="Jfsd"/>
+        <property name="credits" value="6"/>
+    </bean>
+
+    <bean id="instructor" class="com.klef.jfsd.exam.spring_di_autowiring.Instructor">
+        <property name="instructorId" value="111"/>
+        <property name="name" value="abc"/>
+        <property name="email" value="abc@gmail.com"/>
+        <property name="phoneNumber" value="1234567890"/>
+    </bean>
+
+   
+    
+</beans>
